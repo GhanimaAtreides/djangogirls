@@ -123,4 +123,4 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 django_heroku.settings(locals())
-DATABASES['default']['OPTIONS']['sslmode'] = os.environ.get('DATABASE_SSL_REQUIRE', 'require')
+DATABASES['default']['OPTIONS']['sslmode'] = os.environ.get('DATABASE_SSLMODE', 'require')
