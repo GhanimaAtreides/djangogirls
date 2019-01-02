@@ -129,7 +129,7 @@ DATABASES['default']['OPTIONS']['sslmode'] = os.environ.get('DATABASE_SSLMODE', 
 TINYMCE_DEFAULT_CONFIG = {
     'theme': "advanced",
     'relative_urls': False,
-    'content_css': '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css,//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css,//fonts.googleapis.com/css?family=Shadows Into Light&subset=latin%2Clatin-ext,/static/css/blog.css',
+    'content_css': '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css,//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css,//fonts.googleapis.com/css?family=Shadows Into Light|Lato&subset=latin%2Clatin-ext,/static/css/blog.css',
     'plugins': 'emotions,preview,fullscreen',
     'theme_advanced_resizing': True,
     'theme_advanced_buttons3_add' : 'emotions,preview,fullscreen'
