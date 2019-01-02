@@ -1,5 +1,11 @@
 [packages]
+
 django-heroku = "*"
 django = "==1.11.1"
 gunicorn = "*"
 django-tinymce = "*"
+
+
+[dev-packages]
+
+pylint = "*"
