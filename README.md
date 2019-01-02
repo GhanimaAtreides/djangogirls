@@ -8,6 +8,8 @@ Local admin: http://localhost:8000/admin
 
 ### Start
 
+in the same folder where this file is:
+
 ```sh
 docker-compose up -d
 ```
