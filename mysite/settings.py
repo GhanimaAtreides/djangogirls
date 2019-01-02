@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tinymce',
     'blog',
 ]
 
@@ -124,3 +125,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 django_heroku.settings(locals())
 DATABASES['default']['OPTIONS']['sslmode'] = os.environ.get('DATABASE_SSLMODE', 'require')
+
+TINYMCE_DEFAULT_CONFIG = {
+    'theme': "advanced",
+    'relative_urls': False,
+    'content_css': '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css,//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css,//fonts.googleapis.com/css?family=Shadows Into Light&subset=latin%2Clatin-ext,/static/css/blog.css',
+    'plugins': 'emotions,preview,fullscreen',
+    'theme_advanced_resizing': True,
+    'theme_advanced_buttons3_add' : 'emotions,preview,fullscreen'
+}
