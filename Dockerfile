@@ -12,6 +12,4 @@
  
  RUN pipenv install
 
- RUN pipenv run python manage.py collectstatic
-
  ADD . /app/
