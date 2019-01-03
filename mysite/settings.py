@@ -126,6 +126,17 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 django_heroku.settings(locals())
 DATABASES['default']['OPTIONS']['sslmode'] = os.environ.get('DATABASE_SSLMODE', 'require')
 
+SECURE_BROWSER_XSS_FILTER = True 
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True 
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_SECONDS = 31536000
+SECURE_SSL_HOST = os.environ['ALLOWED_HOST']
+SECURE_SSL_REDIRECT = os.environ.get('SECURE_SSL_REDIRECT', 'TRUE') != 'FALSE'
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+CSRF_COOKIE_SECURE = True
+CSRF_USE_SESSIONS = True
+
 TINYMCE_DEFAULT_CONFIG = {
     'theme': "advanced",
     'relative_urls': False,
