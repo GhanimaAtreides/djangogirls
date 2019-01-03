@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="post">
+    <p>The idea of the post comes from the blogpost of John D. Cook. <br>
+        Original post: 
+        <a href="https://www.johndcook.com/blog/2017/10/07/exponential-sums-make-pretty-pictures/">link</a> <br><br>
+        Please add a date below and it will return the image of the exponensial sum of it.
+        Here you can find what exactly an exponensial sum is: <a href="https://www.johndcook.com/expsum/details.html">link</a>
+        
+    </p>
+    <form method="post">
+        Date (yyyy-mm-dd):<br>
+        <input type="text" name="date" value="{{sum_date}}">
+        <input type="submit" value="Submit">
+        {% csrf_token %}
+    </form>
+    {% if sum_date %}
+    <img src="/experiments/experiment_exp_sum.png?date={{ sum_date }}">
+    {% endif %}
+</div>
+{% endblock %}
