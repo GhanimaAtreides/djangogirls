@@ -29,4 +29,5 @@ docker-compose logs -f web
 ### Deploy
 
 1. Commit
-2. `git push heroku master`
+2. `git push heroku master` -> to heroku
+3. `git push origin master` -> to github
